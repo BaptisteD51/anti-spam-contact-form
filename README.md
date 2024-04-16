@@ -1,4 +1,4 @@
-# anti-spam-contact-form
+# A contact form to protect against low quality spam
 I made this form to protect against russian spammers.
 
 There is several layers of protection :
