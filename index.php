@@ -21,8 +21,18 @@ $number2 = $numbers[random_int(0, 8)];
 
 $_SESSION['result'] = $number1->value + $number2->value;
 
-require_once 'header.inc.php';
+require_once 'views/header.inc.php';
 
-require_once 'form.inc.php';
+if(!isset($_SESSION['email_sent'])){
+    if(isset($_SESSION['error'])){
+        require_once 'views/error_message.inc.php';
+    }
+    require_once 'views/form.inc.php';
+}else{
+    require_once 'views/succes_message.inc.php';
+}
 
-require_once 'footer.inc.php';
+require_once 'views/footer.inc.php';
+
+unset($_SESSION['email_sent']);
+unset($_SESSION['error']);

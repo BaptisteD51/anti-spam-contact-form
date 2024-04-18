@@ -1,0 +1,36 @@
+#miel{
+    display:none;
+}
+
+label[for='miel']{
+    display: none;
+}
+
+div.info{
+    border:solid 4px;
+    border-radius:20px;
+    padding:10px;
+    margin-bottom:25px;
+}
+
+div.success{
+    color:green;
+}
+
+div.error{
+    color:red;
+}
+
+main{
+    max-width:600px;
+    background-color: #dae5e1;
+    padding: 10px;
+}
+
+div.captcha{
+    display:flex;
+}
+
+form div{
+    margin: 25px 0px;
+}

@@ -28,5 +28,8 @@
         <input type="number" name="nombre" id="nombre">
     </div>
 
-    <input type="submit" value="Envoyer">
+    <div>
+        <input type="submit" value="Envoyer">
+    </div>
+    
 </form>
