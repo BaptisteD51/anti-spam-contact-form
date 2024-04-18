@@ -2,7 +2,7 @@
 session_start();
 unset($_SESSION['result']);
 
-require_once 'number.inc.php';
+require_once 'classes/number.inc.php';
 
 $numbers = [
     new Number(1, 'un.png'),

@@ -1,7 +1,8 @@
 <?php
 session_start();
-require_once 'mail.inc.php';
+require_once 'classes/mail.inc.php';
 require_once 'functions.inc.php';
+require_once 'config.php';
 
 /* Checks if the bot falls into the honeypot */
 if(!empty($_POST['miel'])){
@@ -29,7 +30,7 @@ else if(containsCyrillic($_POST['text'])){
 /* Checks if all required fields are not empty and if email is valid */
 else if( !empty($_POST['name']) && !empty($_POST['text']) && filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
     echo 'Message valide !';
-    $mail = new Mail($_POST['name'],$_POST['email'],$_POST['text'],['dufourbaptiste08@gmail.com','vandamme4012@gmail.com']);
+    $mail = new Mail($_POST['name'],$_POST['email'],$_POST['text'],$emails);
     $mail->send_mail();
     $_SESSION['email_sent'] = 1;
     
